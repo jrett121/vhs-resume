@@ -118,6 +118,58 @@
       0% { opacity: 0.4; }
       100% { opacity: 0; }
     }
+    /* --- Typewriter Jones video button --- */
+.tj-video-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20%; /* places it on the opposite side from your PDF button */
+  transform: translateX(-50%);
+  display: inline-grid;
+  place-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  cursor: inherit;
+  z-index: 3; /* ensures it's clickable above overlays */
+}
+
+.tj-video-button img {
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.tj-video-button:hover img,
+.tj-video-button:focus img {
+  transform: scale(1.03);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+.tj-label {
+  font: 600 13px/1.1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #eaeaea;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.2px;
+  opacity: 0.95;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 640px) {
+  .tj-video-button {
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+  }
+  .tj-video-button img {
+    width: 130px;
+  }
+  .pdf-button {
+    left: 50%;
+    bottom: 92px;
+    transform: translateX(-50%);
+  }
+}
+
   </style>
 </head>
 <body>
@@ -206,4 +258,22 @@
     });
   </script>
 </body>
+<!-- Typewriter Jones Teaching Video Button -->
+<a
+  class="tj-video-button"
+  href="https://www.youtube.com/watch?v=vgyHvITHmj8"
+  target="_blank"
+  rel="noopener"
+  aria-label="Watch: Teaching with Technology (opens in new tab)"
+  title="Typewriter Jones Presents: Teaching with Technology"
+>
+  <img
+    src="assets/typewriter jones profile no bg.png"
+    alt="Typewriter Jones — click to watch Teaching with Technology video"
+    width="160"
+    height="auto"
+    loading="lazy"
+  />
+  <span class="tj-label">Teaching with Technology</span>
+</a>
 </html>
