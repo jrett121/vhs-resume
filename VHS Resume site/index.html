@@ -85,14 +85,17 @@
     .pdf-button {
       position: fixed;
       bottom: 20px;
-      left: 80%; /* 4/5ths across the screen */
+      left: 80%;
       transform: translateX(-50%);
       text-decoration: none;
+      z-index: 1000;
+      cursor: pointer;
     }
     .pdf-button img {
       width: 150px;
       height: auto;
       display: block;
+      pointer-events: auto;
     }
     .vhs-video-overlay {
       position: fixed;
@@ -129,7 +132,7 @@
     </div>
   </div>
 
-  <a href="assets/Jarrett_Golding_VHS_Resume.pdf" class="pdf-button" download>
+  <a href="assets/jarrett-golding-vhs-resume.pdf" class="pdf-button" download>
     <img src="assets/pdf-button-image.png" alt="Download PDF Resume">
   </a>
 
