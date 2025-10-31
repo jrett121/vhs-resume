@@ -156,20 +156,31 @@
       box-shadow: 0 10px 28px rgba(0,0,0,.35);
       transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
     }
+          /* keep the video-button link from turning purple or blue */
+      .tj-video-button,
+      .tj-video-button:link,
+      .tj-video-button:visited,
+      .tj-video-button:hover,
+      .tj-video-button:active {
+        color: inherit;
+        text-decoration: none;
+      }
+
     .tj-video-button:hover img,
     .tj-video-button:focus img {
       transform: scale(1.03);
       box-shadow: 0 14px 36px rgba(0,0,0,.45);
     }
-    ..tj-label {
-        font-family: "VT323", monospace;
-        font-size: 28px;
-        color: #eaeaea;
-        letter-spacing: 0.5px;
-        text-shadow: 0 1px 0 #fff, 1px 1px 0 #9a9a9a;
-        -webkit-font-smoothing: none;
-        font-smooth: never;
-      }
+    .tj-label {
+      font-family: "VT323", monospace;
+      font-size: 28px;
+      font-weight: 400;            /* VT323 looks best at 400 */
+      color: #eaeaea;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 0 #fff, 1px 1px 0 #9a9a9a;
+      -webkit-font-smoothing: none;
+      font-smooth: never;
+    }
     @media (max-width: 640px) {
       .tj-video-button { left: 50%; bottom: 16px; transform: translateX(-50%); }
       .tj-video-button img { width: 130px; }
@@ -178,7 +189,6 @@
   </style>
 </head>
 <body>
-</a>
   <div class="vhs-container">
     <div class="vhs" id="vhs">
       <div class="vhs-side vhs-front"></div>
